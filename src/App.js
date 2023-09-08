@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [xAxis, setXAxis] = useState("200");
+  const [yAxis, setYAxis] = useState("200");
+
+  const submit = "https://placebear.com/g/" + xAxis + "/" + yAxis;
+
+  // console.log(xAxis);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input
+        placeholder="X-axis"
+        value={xAxis}
+        onChange={(e) => setXAxis(e.target.value)}
+      />
+      <input
+        placeholder="Y-axis"
+        value={yAxis}
+        onChange={(e) => setYAxis(e.target.value)}
+      />
+      <a href={submit}>
+        <button type="submit">Submit</button>
+      </a>
     </div>
   );
 }
