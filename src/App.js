@@ -7,19 +7,10 @@ function App() {
 
   const submit = "https://placebear.com/g/" + xAxis + "/" + yAxis;
 
-  // console.log(xAxis);
   return (
     <div className="App">
-      <input
-        placeholder="X-axis"
-        value={xAxis}
-        onChange={(e) => setXAxis(e.target.value)}
-      />
-      <input
-        placeholder="Y-axis"
-        value={yAxis}
-        onChange={(e) => setYAxis(e.target.value)}
-      />
+      <input value={xAxis} onChange={(e) => setXAxis(e.target.value)} />
+      <input value={yAxis} onChange={(e) => setYAxis(e.target.value)} />
       <a href={submit}>
         <button type="submit">Submit</button>
       </a>
