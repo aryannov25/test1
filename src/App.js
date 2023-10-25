@@ -7,7 +7,6 @@ function App() {
 
   const submit = "https://placebear.com/g/" + xAxis + "/" + yAxis;
 
-  // console.log(xAxis);
   return (
     <div className="App">
       <input
