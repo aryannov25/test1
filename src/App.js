@@ -9,15 +9,8 @@ function App() {
 
   return (
     <div className="App">
-      <input
-        value={xAxis}
-        onChange={(e) => setXAxis(e.target.value)}
-      />
-      <input
-        placeholder="Y-axis"
-        value={yAxis}
-        onChange={(e) => setYAxis(e.target.value)}
-      />
+      <input value={xAxis} onChange={(e) => setXAxis(e.target.value)} />
+      <input value={yAxis} onChange={(e) => setYAxis(e.target.value)} />
       <a href={submit}>
         <button type="submit">Submit</button>
       </a>
